@@ -50,4 +50,44 @@ const NavBar = ({ user, onLogout }) => {
           ))}
         </div>
 
-        
+        {/* User Info & Actions */}
+        <div className="user-section">
+          {/* User Stats */}
+          <div className="user-stats">
+            <div className="stat yellow">
+              <Star className="icon" />
+              <span>{user?.stars ?? 0}</span>
+            </div>
+            <div className="stat purple">
+              <Award className="icon" />
+              <span>{user?.points ?? 0}</span>
+            </div>
+          </div>
+
+          {/* User Menu */}
+          <div className="user-menu">
+            <button className="user-btn">
+              <div className="user-avatar">
+                <User />
+              </div>
+              <span className="username">{user?.username ?? "Guest"}</span>
+            </button>
+
+            <div className="dropdown">
+              <Link to="/profile" className="dropdown-item">
+                <User className="icon" />
+                <span>Profile</span>
+              </Link>
+              <button onClick={onLogout} className="dropdown-item logout">
+                <LogOut className="icon" />
+                <span>Sign Out</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
+};
+
+export default NavBar;
