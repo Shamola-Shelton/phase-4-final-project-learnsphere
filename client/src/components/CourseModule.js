@@ -2,12 +2,14 @@ import React from "react";
 import { useHistory } from "react-router-dom";
 import { Play, CheckCircle, Lock, FileText } from "lucide-react";
 
+
 function CourseModule({ module, index, courseId }) {
   const history = useHistory();
 
   const handleStart = () => {
     history.push(`/course/${courseId}/module/${module.id}`);
   };
+  
 
   return (
     <div className="p-4 rounded-2xl shadow bg-white flex justify-between items-center mb-3">
