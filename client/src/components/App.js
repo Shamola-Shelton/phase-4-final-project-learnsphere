@@ -8,11 +8,11 @@ import Dashboard from "./Dashboard";
 import Courses from "./Courses";
 import CourseDetail from "./CourseDetail";
 import ModuleContent from "./ModuleContent"; // ✅ new import
-import Leaderboard from "./Leaderboard";
+// import Leaderboard from "./Leaderboard"; // 🚨 missing file
 import Profile from "./Profile";
 import Quiz from "./Quiz";
 import Auth from "./Auth";
-import Chat from "./Chat";
+// import Chat from "./Chat"; // 🚨 missing file
 import AvatarCustomizer from "./AvatarCustomizer";
 
 function App() {
@@ -58,9 +58,9 @@ function App() {
           render={(props) => <ModuleContent {...props} courses={courses} />}
         />
         <Route path="/quiz" component={Quiz} />
-        <Route path="/leaderboard" component={Leaderboard} />
+        {/* <Route path="/leaderboard" component={Leaderboard} /> 🚨 missing */}
         <Route path="/profile" component={Profile} />
-        <Route path="/chat" component={Chat} />
+        {/* <Route path="/chat" component={Chat} /> 🚨 missing */}
         <Route path="/avatar" component={AvatarCustomizer} />
 
         {/* Catch-all redirect */}
