@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { useParams, useHistory } from "react-router-dom";
 import { CheckCircle, ArrowLeft } from "lucide-react";
-import summarize from "../utils/summarizer";
+// import summarize from "../utils/summarizer"; // 🚨 missing file
 import { courses } from "./Courses";
-
 
 function ModuleContent() {
   const { courseId, moduleId } = useParams();
@@ -48,7 +47,7 @@ function ModuleContent() {
           <p className="text-gray-700 mb-4">{module.content}</p>
           <div className="p-4 bg-gray-100 rounded-xl">
             <h3 className="font-bold mb-2">✨ Auto Summary</h3>
-            <p className="text-sm text-gray-600">{summarize(module.content)}</p>
+            {/* <p className="text-sm text-gray-600">{summarize(module.content)}</p> 🚨 using missing function */}
           </div>
         </div>
       )}
