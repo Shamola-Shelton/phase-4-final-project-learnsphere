@@ -12,6 +12,10 @@ from resources.module import ModuleList
 
 socketio = SocketIO(app, cors_allowed_origins="*")
 
+@app.route('/')
+def home():
+    return "LearnSphere Server Running", 200
+
 api.add_resource(Signup, '/api/signup')
 api.add_resource(Login, '/api/login')
 api.add_resource(CourseList, '/api/courses')
@@ -26,3 +30,4 @@ def handle_message(data):
 
 if __name__ == '__main__':
     socketio.run(app, port=5555)
+    
